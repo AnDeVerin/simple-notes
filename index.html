@@ -9,53 +9,114 @@
     <title>Notes</title>
 </head>
 
-<body class="body app">
+<body class="body" data-component="app">
     <header class="header">
         <h1 class="header__title">Notes</h1>
-        <button class="button add-button header__button">+</button>
+        <button class="button add-button header__button" data-component="add-button">+</button>
     </header>
     <main class="main">
-        <section class="editor editor_hidden">
+        <section class="editor js-hidden" data-component="editor">
             <div class="editor__content">
                 <header class="editor__header">
-                    <h2 class="editor__title">New note</h2>
+                    <h2 class="editor__title">...</h2>
                     <div class="editor__buttons">
                         <button class="button ok-button editor__button">OK</button>
                         <button class="button color-button editor__button">C</button>
-                        <button class="button remove-button editor__button">X</button>
-                        <div class="color-buttons">
-                            <button class="button col-button col-button_bg_orange"></button>
-                            <button class="button col-button col-button_bg_blue"></button>
-                            <button class="button col-button col-button_bg_pink"></button>
-                            <button class="button col-button col-button_bg_yellow"></button>
-                            <button class="button col-button col-button_bg_salad"></button>
-                            <button class="button col-button col-button_bg_green"></button>
-                        </div>
+                        <button class="button cancel-button editor__button">X</button>
+
                     </div>
                 </header>
-                <textarea name="" id="" rows="15" class="editor__input" placeholder="Add your note..." autofocus></textarea>
+                <textarea rows="15" class="editor__input" placeholder="Add your note..." autofocus></textarea>
             </div>
         </section>
-        <ul class="notes"></ul>
+        <ul class="notes">
+            <li tabindex="0" class="note">
+                <div class="buttons">
+                    <button class="button edit-button buttons__button">E</button>
+                    <button class="button color-button buttons__button">C</button>
+                    <button class="button remove-button buttons__button">X</button>
+                    <div class="color-buttons js-hidden">
+                        <button class="button col-button col-button_bg_orange"></button>
+                        <button class="button col-button col-button_bg_blue"></button>
+                        <button class="button col-button col-button_bg_pink"></button>
+                        <button class="button col-button col-button_bg_yellow"></button>
+                        <button class="button col-button col-button_bg_salad"></button>
+                        <button class="button col-button col-button_bg_green"></button>
+                    </div>
+                </div>
+                <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci ratione alias officiis minima, ab similique veniam! Dolorem, magni consequuntur velit, corporis quos quam eaque libero cum, nisi reiciendis dolor.</p>
+            </li>
+            <li tabindex="0" class="note">
+                <div class="buttons">
+                    <button class="button edit-button buttons__button">E</button>
+                    <button class="button color-button buttons__button">C</button>
+                    <button class="button remove-button buttons__button">X</button>
+                    <div class="color-buttons js-hidden">
+                        <button class="button col-button col-button_bg_orange"></button>
+                        <button class="button col-button col-button_bg_blue"></button>
+                        <button class="button col-button col-button_bg_pink"></button>
+                        <button class="button col-button col-button_bg_yellow"></button>
+                        <button class="button col-button col-button_bg_salad"></button>
+                        <button class="button col-button col-button_bg_green"></button>
+                    </div>
+                </div>
+                <p class="note__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, distinctio quam? Tenetur fugit natus, assumenda voluptatibus nulla nemo error aspernatur delectus ad a temporibus possimus porro necessitatibus neque laborum. Aut! ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci ratione alias officiis minima, ab similique veniam! Dolorem, magni consequuntur velit, corporis quos quam eaque libero cum, nisi reiciendis dolor.</p>
+            </li>
+            <li tabindex="0" class="note">
+                <div class="buttons">
+                    <button class="button edit-button buttons__button">E</button>
+                    <button class="button color-button buttons__button">C</button>
+                    <button class="button remove-button buttons__button">X</button>
+                    <div class="color-buttons js-hidden">
+                        <button class="button col-button col-button_bg_orange"></button>
+                        <button class="button col-button col-button_bg_blue"></button>
+                        <button class="button col-button col-button_bg_pink"></button>
+                        <button class="button col-button col-button_bg_yellow"></button>
+                        <button class="button col-button col-button_bg_salad"></button>
+                        <button class="button col-button col-button_bg_green"></button>
+                    </div>
+                </div>
+                <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci ratione alias officiis minima, ab similique veniam! Dolorem, magni consequuntur velit, corporis quos quam eaque libero cum, nisi reiciendis dolor.</p>
+            </li>
+            <li tabindex="0" class="note">
+                <div class="buttons">
+                    <button class="button edit-button buttons__button">E</button>
+                    <button class="button color-button buttons__button">C</button>
+                    <button class="button remove-button buttons__button">X</button>
+                    <div class="color-buttons js-hidden">
+                        <button class="button col-button col-button_bg_orange"></button>
+                        <button class="button col-button col-button_bg_blue"></button>
+                        <button class="button col-button col-button_bg_pink"></button>
+                        <button class="button col-button col-button_bg_yellow"></button>
+                        <button class="button col-button col-button_bg_salad"></button>
+                        <button class="button col-button col-button_bg_green"></button>
+                    </div>
+                </div>
+                <p class="note__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci ratione alias officiis minima, ab similique veniam! Dolorem, magni consequuntur velit, corporis quos quam eaque libero cum, nisi reiciendis dolor.</p>
+            </li>
+        </ul>
     </main>
 
-    <template id="note-template">
+    <template data-component="note">
         <li tabindex="0" class="note">
             <div class="buttons">
                 <button class="button edit-button buttons__button">E</button>
                 <button class="button color-button buttons__button">C</button>
                 <button class="button remove-button buttons__button">X</button>
-                <div class="color-buttons">
-                    <button class="button col-button col-button_bg_orange"></button>
-                    <button class="button col-button col-button_bg_blue"></button>
-                    <button class="button col-button col-button_bg_pink"></button>
-                    <button class="button col-button col-button_bg_yellow"></button>
-                    <button class="button col-button col-button_bg_salad"></button>
-                    <button class="button col-button col-button_bg_green"></button>
-                </div>
             </div>
             <p class="note__text"></p>
         </li>
+    </template>
+
+    <template data-component="color-selector" >
+        <div class="color-buttons js-hidden">
+            <button data-color="orange" class="button col-button col-button_bg_orange"></button>
+            <button data-color="blue" class="button col-button col-button_bg_blue"></button>
+            <button data-color="pink" class="button col-button col-button_bg_pink"></button>
+            <button data-color="yellow" class="button col-button col-button_bg_yellow"></button>
+            <button data-color="salad" class="button col-button col-button_bg_salad"></button>
+            <button data-color="green" class="button col-button col-button_bg_green"></button>
+        </div>
     </template>
 </body>
 <script type="module" src="./js/index.js"></script>

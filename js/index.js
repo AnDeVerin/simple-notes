@@ -1,5 +1,8 @@
+/* eslint-disable no-new */
 /* eslint-disable import/extensions */
 
-import { Controller } from './controller.js';
+import App from './components/app.js';
 
-Controller.hi();
+new App({
+  element: document.querySelector('[data-component="app"]'),
+});

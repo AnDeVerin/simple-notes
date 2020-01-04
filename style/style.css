@@ -160,10 +160,12 @@ html {
 }
 .edit-button:hover,
 .ok-button:hover,
-.remove-button:hover {
+.remove-button:hover,
+.cancel-button:hover {
     border: 1px solid var(--bg-color);
  }
-.remove-button {
+.remove-button,
+.cancel-button {
     background-color: var(--err-color);
 }
 .color-button {
@@ -181,7 +183,6 @@ html {
 
 .color-buttons {
     display: flex;
-    display: none;
     z-index: 3;
     position: absolute;
     right: -0.5rem;
@@ -190,9 +191,6 @@ html {
     border-radius: 0.8rem;
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
-}
-.color-button:focus ~ .color-buttons {
-    display: flex;
 }
 .col-button {
     margin-left: 0.5rem;
@@ -231,12 +229,9 @@ html {
     left: 0;
     right: 0;
     z-index: 20;
-    background-color: rgba(255,255,255, 0.7);
+    background-color: rgba(155,155,155, 0.7);
     display: flex;
     align-items: center;
-}
-.editor_hidden {
-    display: none;
 }
 .editor__content {
     margin: 0 auto;
@@ -276,7 +271,24 @@ html {
     color: var(--text-color);
 }
 
+.js-hidden {
+    display: none;
+}
+
 /* media */
+@media screen and (max-width: 1023px) {
+    .button {
+        width: 4rem;
+        height: 4rem;
+    }
+
+    .add-button {
+        font-size: 6.3rem;
+        line-height: 7rem;
+        width: 7rem;
+        height: 7rem;
+    }
+}
 
 @media screen and (max-width: 767px) {
     .header {
@@ -297,15 +309,7 @@ html {
         margin-bottom: 1.5rem;
     }
 
-    .button {
-        width: 3rem;
-        height: 3rem;
-    }
-
-    .add-button {
-        font-size: 6.3rem;
-        line-height: 7rem;
-        width: 7rem;
-        height: 7rem;
+    .editor__title {
+        font-size: 3rem;
     }
 }
