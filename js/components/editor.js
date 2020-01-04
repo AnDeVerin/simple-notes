@@ -42,10 +42,9 @@ export default class Editor extends Component {
 
     if (!id) {
       this._title.innerHTML = 'New note';
-      this._input.innerHTML = '';
+      this._setEditorBackground(NOTE_COLORS.default);
     }
 
-    this._setEditorBackground(NOTE_COLORS.default);
     this._element.classList.remove('js-hidden');
     this._input.focus();
   }
@@ -56,6 +55,7 @@ export default class Editor extends Component {
   }
 
   _clearEditor() {
+    this._input.value = '';
     this._currentNote = {};
   }
 }
