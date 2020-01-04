@@ -235,6 +235,9 @@ html {
     display: flex;
     align-items: center;
 }
+.editor_hidden {
+    display: none;
+}
 .editor__content {
     margin: 0 auto;
     width: 100%;

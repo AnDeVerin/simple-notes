@@ -12,10 +12,10 @@
 <body class="body app">
     <header class="header">
         <h1 class="header__title">Notes</h1>
-        <button tabindex="0" class="button add-button header__button">+</button>
+        <button class="button add-button header__button">+</button>
     </header>
     <main class="main">
-        <section class="editor">
+        <section class="editor editor_hidden">
             <div class="editor__content">
                 <header class="editor__header">
                     <h2 class="editor__title">New note</h2>
@@ -36,217 +36,27 @@
                 <textarea name="" id="" rows="15" class="editor__input" placeholder="Add your note..." autofocus></textarea>
             </div>
         </section>
-        <ul class="notes">
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, repellendus
-                    illo? Enim vitae earum et veritatis molestias quibusdam possimus dolores neque perspiciatis voluptas
-                    dolore dolorem, quisquam consectetur animi saepe. Placeat?</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, maiores rerum
-                    mollitia itaque velit quaerat sint tenetur veritatis quam ipsam vel ratione voluptatibus nesciunt
-                    dolor harum dignissimos soluta dolore alias!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, soluta dolore alias!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsam qui vitae
-                    debitis laudantium totam sit perspiciatis natus atque exercitationem excepturi, laborum voluptate
-                    voluptates minima soluta, nemo nesciunt reiciendis iure!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsam qui vitae
-                    debitis laudantium totam sit perspiciatis natus atque exercitationem excepturi, laborum voluptate
-                    voluptates minima soluta, nemo nesciunt reiciendis iure!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, soluta dolore alias!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, repellendus
-                    illo? Enim vitae earum et veritatis molestias quibusdam possimus dolores neque perspiciatis voluptas
-                    dolore dolorem, quisquam consectetur animi saepe. Placeat?</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, maiores rerum
-                    mollitia itaque velit quaerat sint tenetur veritatis quam ipsam vel ratione voluptatibus nesciunt
-                    dolor harum dignissimos soluta dolore alias!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, soluta dolore alias!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsam qui vitae
-                    debitis laudantium totam sit perspiciatis natus atque exercitationem excepturi, laborum voluptate
-                    voluptates minima soluta, nemo nesciunt reiciendis iure!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas ipsam qui vitae
-                    debitis laudantium totam sit perspiciatis natus atque exercitationem excepturi, laborum voluptate
-                    voluptates minima soluta, nemo nesciunt reiciendis iure!</p>
-            </li>
-            <li tabindex="0" class="note">
-                <div class="buttons">
-                    <button class="button edit-button buttons__button">E</button>
-                    <button class="button color-button buttons__button">C</button>
-                    <button class="button remove-button buttons__button">X</button>
-                    <div class="color-buttons">
-                        <button class="button col-button col-button_bg_orange"></button>
-                        <button class="button col-button col-button_bg_blue"></button>
-                        <button class="button col-button col-button_bg_pink"></button>
-                        <button class="button col-button col-button_bg_yellow"></button>
-                        <button class="button col-button col-button_bg_salad"></button>
-                        <button class="button col-button col-button_bg_green"></button>
-                    </div>
-                </div>
-                <p class="note__text">Lorem ipsum dolor, soluta dolore alias!</p>
-            </li>
-        </ul>
+        <ul class="notes"></ul>
     </main>
-</body>
 
+    <template id="note-template">
+        <li tabindex="0" class="note">
+            <div class="buttons">
+                <button class="button edit-button buttons__button">E</button>
+                <button class="button color-button buttons__button">C</button>
+                <button class="button remove-button buttons__button">X</button>
+                <div class="color-buttons">
+                    <button class="button col-button col-button_bg_orange"></button>
+                    <button class="button col-button col-button_bg_blue"></button>
+                    <button class="button col-button col-button_bg_pink"></button>
+                    <button class="button col-button col-button_bg_yellow"></button>
+                    <button class="button col-button col-button_bg_salad"></button>
+                    <button class="button col-button col-button_bg_green"></button>
+                </div>
+            </div>
+            <p class="note__text"></p>
+        </li>
+    </template>
+</body>
+<script type="module" src="./js/index.js"></script>
 </html>
