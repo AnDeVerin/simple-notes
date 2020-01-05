@@ -12,7 +12,7 @@ export default class Editor extends Component {
     this._currentNote = {};
 
     this._colorSelector = new ColorSelector({
-      root: this._element.querySelector('.editor__buttons'),
+      parent: this._element.querySelector('.editor__buttons'),
     });
 
     this._title = this._element.querySelector('.editor__title');
@@ -21,6 +21,10 @@ export default class Editor extends Component {
     this._okButton = this._element.querySelector('.ok-button');
     this._colorButton = this._element.querySelector('.color-button');
     this._cancelButton = this._element.querySelector('.cancel-button');
+
+    this._okButton.addEventListener('click', () => {
+      this._updateNote();
+    });
 
     this._colorButton.addEventListener('click', () => {
       this._colorSelector.show();
@@ -37,12 +41,15 @@ export default class Editor extends Component {
     });
   }
 
-  show({ id = null }) {
-    console.log('id:', id);
-
-    if (!id) {
-      this._title.innerHTML = 'New note';
+  show(note) {
+    if (!note.id) {
+      this._title.textContent = 'New note';
       this._setEditorBackground(NOTE_COLORS.default);
+    } else {
+      this._currentNote = { ...note };
+      this._title.textContent = 'Edit note';
+      this._setEditorBackground(this._currentNote.bg);
+      this._input.value = this._currentNote.text;
     }
 
     this._element.classList.remove('js-hidden');
@@ -57,5 +64,12 @@ export default class Editor extends Component {
   _clearEditor() {
     this._input.value = '';
     this._currentNote = {};
+  }
+
+  _updateNote() {
+    this._currentNote.text = this._input.value || 'no text';
+    this.trigger('note.updated', { ...this._currentNote });
+    this._clearEditor();
+    this.hide();
   }
 }

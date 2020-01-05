@@ -3,21 +3,25 @@
 
 import Component from '../component.js';
 
+const colSelTemplate = document.querySelector('[data-component="color-selector"]');
 export default class ColorSelector extends Component {
-  constructor({ root }) {
-    const colSelTemplate = document.querySelector('[data-component="color-selector"]');
+  constructor({ parent }) {
     const colSelFragment = colSelTemplate.content.cloneNode(true);
 
-    root.appendChild(colSelFragment);
+    parent.appendChild(colSelFragment);
 
-    super(root.querySelector('.color-buttons'));
+    super(parent.querySelector('.color-buttons'));
 
     this._element.addEventListener('click', ({ target }) => {
-      this._selectColor(target.dataset);
+      const { color } = target.dataset;
+      if (!color) {
+        return;
+      }
+      this._selectColor(color);
     });
   }
 
-  _selectColor({ color }) {
+  _selectColor(color) {
     this.trigger('color.selected', { color });
     this.hide();
   }

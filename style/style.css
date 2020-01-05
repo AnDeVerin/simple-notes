@@ -176,7 +176,7 @@ html {
     border: 1px solid var(--primary-color);
 }
 .note:focus .buttons,
-/* .note:focus-within .buttons, */
+.note:focus-within .buttons,
 .note:hover .buttons {
     display: flex;
 }
@@ -191,6 +191,9 @@ html {
     border-radius: 0.8rem;
     background-color: var(--bg-color);
     box-shadow: var(--shadow);
+}
+.note .color-buttons {
+    top: -0.9rem;
 }
 .col-button {
     margin-left: 0.5rem;

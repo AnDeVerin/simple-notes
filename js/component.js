@@ -17,9 +17,10 @@ export default class Component {
     this._element.addEventListener(eventName, handler);
   }
 
-  trigger(eventName, data) {
+  trigger(eventName, data, bubbles = false) {
     const myEvent = new CustomEvent(eventName, {
       detail: data,
+      bubbles,
     });
 
     this._element.dispatchEvent(myEvent);
