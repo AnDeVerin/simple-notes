@@ -1,4 +1,3 @@
-/* eslint-disable no-new */
 /* eslint-disable import/extensions */
 
 import App from './components/app.js';
